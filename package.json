@@ -4,7 +4,7 @@
   "description": "A starter repository for a blog web site using the Eleventy static site generator.",
   "scripts": {
     "build": "npx eleventy",
-    "postbuild": "rm -rf dist && buildProduction _site/index.html --outroot dist --canonicalroot https://myurl.com/ --subsetfonts --optimizeimages",
+    "postbuild": "rm -rf dist && buildProduction _site/index.html _site/_headers --outroot dist --canonicalroot https://myurl.com/ --subsetfonts --optimizeimages && cp _headers dist/",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
   },
